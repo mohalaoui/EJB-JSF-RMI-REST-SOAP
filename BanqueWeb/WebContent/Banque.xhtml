@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" >
+	
+	<h:head>
+		<title>Banque account</title>
+		<h:outputStylesheet library="css" name="style.css" />
+	</h:head>
+	
+	<h:body>
+		<div>
+		   <h:form>
+			   <h:panelGrid columns="2">
+					<h:outputText value="code account"></h:outputText>
+					<h:inputText value="#{banqueMB.code1}"></h:inputText>
+					<h:outputText value="code receiver account"></h:outputText>
+					<h:inputText value="#{banqueMB.code2}"></h:inputText>
+					<h:outputText value="amount"></h:outputText>
+					<h:inputText value="#{banqueMB.amount}"></h:inputText>
+				</h:panelGrid>	
+					<h:commandButton action="#{banqueMB.addAccount}" value="add account"></h:commandButton>
+					<h:commandButton action="#{banqueMB.credit}" value="credit"></h:commandButton>
+					<h:commandButton action="#{banqueMB.debit}" value="debit"></h:commandButton>
+					<h:commandButton action="#{banqueMB.transfer}" value="transfer"></h:commandButton>
+			</h:form>
+		</div>
+		<div>
+			<h:dataTable value="#{banqueMB.listAccounts}" var="account" class="table">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="CODE"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{account.code}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="SOLDE"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{account.solde}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="DATE"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{account.dateCreation}"></h:outputText>
+				</h:column>
+			</h:dataTable>
+		</div>
+	</h:body>
+	
+</html>
