@@ -3,6 +3,7 @@
 ## environnement
  - version : wildfly 17.0.0.final
  - download link : https://wildfly.org/downloads/
+ - java : 8
 
 ## configure h2 or other
 
