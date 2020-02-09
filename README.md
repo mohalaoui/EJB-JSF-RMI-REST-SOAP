@@ -1,4 +1,4 @@
-# EJB_JSF_Simple
+# EJB-JSF-RMI-REST-SOAP-Simple
 
 ## environnement
  - version : wildfly 17.0.0.final
