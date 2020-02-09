@@ -65,5 +65,5 @@ in banque web there is :
 - create a EAR projet and add banqueEJB and BanqueWEB.
 - put BanqueEAR.ear in wildfly-17.0.0.Final\standalone\deployments folder
 - run wildfly: 
-	- > standalone.bat
+	- standalone.bat
 	- $ ./standalone.sh &
