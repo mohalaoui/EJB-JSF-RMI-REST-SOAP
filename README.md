@@ -1,8 +1,8 @@
 # EJB_JSF_Simple
 
 ## environnement
- version : wildfly 17.0.0.final
- download link : https://wildfly.org/downloads/
+ - version : wildfly 17.0.0.final
+ - download link : https://wildfly.org/downloads/
 
 ## configure h2 or other
 
@@ -64,4 +64,6 @@ in banque web there is :
 ## Deploy to wildfly
 - create a EAR projet and add banqueEJB and BanqueWEB.
 - put BanqueEAR.ear in wildfly-17.0.0.Final\standalone\deployments folder
-- run wildfly
+- run wildfly: 
+	- > standalone.bat
+	- $ ./standalone.sh &
